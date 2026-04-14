@@ -2,13 +2,12 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 
-// https://astro.build/config
 export default defineConfig({
-  // Tu dominio base de GitHub
+  // Tu dominio base
   site: "https://martincajiao.github.io",
 
-  // EL NOMBRE EXACTO DE TU REPOSITORIO (asegúrate de que coincida con mayúsculas y minúsculas)
-  base: "/BlackHorse",
+  // TIENE QUE SER IGUAL AL NOMBRE DEL REPO EN MINÚSCULAS
+  base: "/blackhorseland",
 
   vite: {
     plugins: [tailwindcss()],
