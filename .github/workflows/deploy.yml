@@ -20,22 +20,20 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # Actualizamos a la versión que pide Astro
+          node-version: 22
 
       - name: Install dependencies
-        # Le decimos que entre a la carpeta antes de instalar
         run: npm install
         working-directory: ./blackhorse-landing
 
       - name: Build with Astro
-        # Le decimos que entre a la carpeta antes de compilar
         run: npm run build
         working-directory: ./blackhorse-landing
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Subimos la carpeta dist que está dentro de blackhorse-landing
           path: ./blackhorse-landing/dist/
 
   deploy:
