@@ -22,14 +22,12 @@ jobs:
           node-version: 20
       - name: Install dependencies
         run: npm install
-        working-directory: ./blackhorse-landing
       - name: Build with Astro
         run: npm run build
-        working-directory: ./blackhorse-landing
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./blackhorse-landing/dist/
+          path: ./dist/
 
   deploy:
     environment:
