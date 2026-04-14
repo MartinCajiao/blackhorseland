@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   site: "https://martincajiao.github.io",
-  base: "/blackhorseland", // <--- DEBE SER EL NOMBRE DEL REPO EN MINÚSCULAS
+  base: "/blackhorseland",
   vite: {
     plugins: [tailwindcss()],
   },
